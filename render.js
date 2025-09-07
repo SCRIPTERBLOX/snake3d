@@ -36,10 +36,10 @@ function renderSideViewZ(x, y) {
   fill(0, 255, 0);
   for (let i = 0; i < snake.length; i++) {
     let bodyPart = snake[i];
-    rect(x+(bodyPart[0]*tileWidth), (y+tileHeight*heightTiles)-(bodyPart[1]*tileHeight), tileWidth, tileHeight);
+    rect(x+tileWidth*widthTiles-(bodyPart[0]*tileWidth), (y+tileHeight*heightTiles)-(bodyPart[1]*tileHeight), tileWidth, tileHeight);
   }
   fill(255, 0, 0);
-  rect(x+(food[0]*tileWidth), (y+tileHeight*heightTiles)-(food[1]*tileHeight), tileWidth, tileHeight);
+  rect(x+tileHeight*widthTiles-(food[0]*tileWidth), (y+tileHeight*heightTiles)-(food[1]*tileHeight), tileWidth, tileHeight);
 }
 
 function renderSideViewY(x, y) {
